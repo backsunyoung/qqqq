@@ -22,5 +22,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a Python script
-        run: python .github/workflows/example.py
+        env:
+          AZURE_SECRET_TOKEN: ${{ secret.AZURE_SECRET_TOKEN }}
+        run: pythin .github.workflows/example/py
+        
      
